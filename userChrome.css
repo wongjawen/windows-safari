@@ -1,0 +1,104 @@
+/* changing titlebar control button */
+
+@import "parts/titlebutton-dark.css";		/* Delete this line if prefer button style system default */
+@import "parts/titlebutton-light.css";		/* Delete this line if prefer button style system default */
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* Fix spacer inside browser tab bar */
+
+#TabsToolbar .titlebar-spacer{
+	display: none;
+}
+
+/* Set Tab Bar to bottom address bar SCRIPT START HERE */
+
+#navigator-toolbox{
+	display: flex;
+	flex-direction: column-reverse;
+	min-width: 100vw;
+	max-width: 100vw;
+}
+
+#navigator-toolbox #titlebar{
+	flex: 1;
+	margin-left: 10px;
+	margin-right: 10px;
+	appearance: unset !important;
+}
+
+#navigator-toolbox #titlebar #toolbar-menubar{
+	height: 44px;
+}
+
+#navigator-toolbox #titlebar #toolbar-menubar #menubar-items{
+	display: flex;
+}
+
+#navigator-toolbox #titlebar #toolbar-menubar .titlebar-buttonbox-container{
+	height: 16px;
+	position: fixed;
+	top: 0;
+	right: 0;
+	display: flex;
+	margin-top:10px;
+}
+
+#navigator-toolbox #nav-bar:not(.titlebar-color){
+	background-color: rgba(0,0,0,0) !important;
+}
+
+#navigator-toolbox #nav-bar{
+	height: 44px;
+	margin-right:137px;
+	/* margin-left:137px; You can change this with flexible space */
+}
+
+#navigator-toolbox #nav-bar #nav-bar-customization-target{
+	width: 100% !important;
+}
+
+#navigator-toolbox #titlebar #TabsToolbar{
+	height: 44px;
+}
+
+#navigator-toolbox #titlebar #TabsToolbar .titlebar-buttonbox-container{
+	height: 16px;
+	position: fixed;
+	top: 0;
+	right: 0;
+	display: flex;
+	margin-top:10px;
+}
+
+/* <-- end --> */
+/* Set Tab Bar to bottom address bar SCRIPT END */
+
+/* Full width tabs */
+
+.tabbrowser-tab:not([style^="max-width"]):not([pinned]),
+.tabbrowser-tab[style^="max-width: 100px !important;"]:not([pinned]) {
+	max-width: 100% !important;
+}
+
+.tabbrowser-tab:not([style^="max-width"]):not([pinned]):not([fadein]),
+.tabbrowser-tab[style^="max-width: 100px !important;"]:not([pinned]):not([fadein]) {
+	max-width: .1px !important;
+}
+
+/* fix outline in active tabs */
+
+.tabbrowser-tab .tab-background{
+	outline-color:rgba(255,255,255,0.3) !important;
+}
+
+
+/* hide close tab button and show when hover */
+
+.tabbrowser-tab .tab-stack .tab-content:not([pinned]) .tab-close-button{
+	visibility:hidden;
+}
+
+.tabbrowser-tab .tab-stack .tab-content:not([pinned]):hover .tab-close-button{
+	visibility:unset;
+}
