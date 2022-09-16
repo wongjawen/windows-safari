@@ -12,7 +12,7 @@ This is my first post in github.. ^.^
 
 I made this because I adore the UI/UX of Safari in MacOS and due to lack of extension I moved to Firefox, and made this theme to satisfy my needs, shortly I'm not made this alone, thanks to https://github.com/AdamXweb/WhiteSurFirefoxThemeMacOS
 
-If this is your first time customizing your Firefox through userChrome.css you should read ![userchrome.org](https://www.userchrome.org/)
+If this is your first time customizing your Firefox through userChrome.css you should read https://www.userchrome.org
 
 with this script any improvement or suggestion are welcome
 
