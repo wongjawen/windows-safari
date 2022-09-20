@@ -1,0 +1,82 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+
+#navigator-toolbox-background{
+	background-color: rgba(20,20,20,0.8) !important;
+}
+
+#navigator-toolbox-background:before{
+	content: "";
+	position: fixed;
+	display: block;
+	width: 100vw;
+	height: 100vh;
+	background-image: url("../wallpaper/CachedImage_1920_1080_POS4.jpg");
+	background-size: cover;
+	background-position: top;
+	z-index: -2;
+	pointer-events:none;
+}
+
+#navigator-toolbox:before{
+	content: "";
+	display: block;
+	position: fixed;
+	top:0;
+	width: 100%;
+	height: 100%;
+	backdrop-filter: blur(50px);
+	z-index:-1;
+}
+
+#navigator-toolbox{
+	border-color: rgba(0,0,0,0) !important;
+	background-color: unset! important;
+}
+
+#PersonalToolbar{
+	background-color: rgba(255,255,255,0) !important;
+}
+
+#sidebar-box{
+	transition: 0.5s;
+}
+
+#sidebar-header{
+	border-color: rgba(0,0,0,0.2) !important;
+}
+
+#sidebar-splitter{
+	opacity: 0;
+}
+
+#tabbrowser-tabs{
+	margin-right: 5px;
+}
+
+.tabbrowser-tab:not([pinned]) .tab-stack .tab-background{
+	margin: unset !important;
+	border-radius: unset !important;
+	/* border-left: 1px solid rgba(0,0,0,0.3) !important;
+	border-top: 1px solid rgba(0,0,0,0.3) !important;
+	border-bottom: 1px solid rgba(0,0,0,0.3) !important; */
+}
+
+.tab-background[selected]{
+	background-color: rgba(209,209,214,0.2) !important;
+	background-image: unset !important;
+	outline: unset !important;
+	box-shadow: unset !important;
+}
+
+.tabbrowser-tab:not([pinned]){
+	padding: unset !important;
+}
+
+#tabbrowser-arrowscrollbox-periphery{
+	/* border-left: 1px solid rgba(0,0,0,0.3) !important; */
+}
+
+#tabbrowser-arrowscrollbox{
+	min-height: 44px !important;
+}

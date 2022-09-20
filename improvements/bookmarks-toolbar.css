@@ -1,0 +1,25 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+#nav-bar{
+	order: 2;
+}
+
+#PersonalToolbar{
+	order: 1;
+}
+
+#PlacesToolbarItems{
+	margin-top: 5px;
+	margin-bottom: 5px;
+	display: flex;
+	justify-content: center;
+}
+
+#PlacesToolbarItems .bookmark-item{
+	padding-right: 12px !important;
+	padding-left: 12px !important;
+}
+
+#PlacesToolbarItems .bookmark-item .toolbarbutton-icon{
+	display:none;	
+}
